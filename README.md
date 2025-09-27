@@ -117,5 +117,39 @@ Here’s a quick preview of the interactive dashboard 👇
 ![Dashboard Demo](assets/FinVision_Dashboard.gif)
 
 
+## 🛠 Setup Guide
 
-Do you want me to also **add installation & reproduction steps** (MySQL setup + running the EDA notebook + opening the Power BI dashboard), so it’s GitHub-ready for others to use?
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/finvision.git
+cd finvision
+```
+
+### Setup Database (MySQL)
+
+* Create a database:
+
+  ```sql
+  CREATE DATABASE bank;
+  ```
+* Import provided CSV files into tables
+
+### Run EDA Notebook
+
+* Open `FinVision_EDA.ipynb` in Jupyter Notebook
+* Install dependencies:
+
+  ```bash
+  pip install pandas numpy matplotlib seaborn mysql-connector-python
+  ```
+* Run all cells to perform data cleaning & EDA
+
+### Power BI Dashboard
+
+* Open the `.pbix` file (if included)
+* Connect Power BI to the `bank` database
+* Refresh visuals to generate insights
+
+---
+
