@@ -1,93 +1,171 @@
 
-# FinVision – Banking Domain End-to-End Project 🏦
 
-## Project Overview
+# FinVision – Banking Domain End-to-End Data Analytics Project 🏦
 
-The **FinVision** project is a comprehensive, end-to-end data analytics pipeline focused on gaining valuable insights from banking customer data. It covers the entire lifecycle, from raw data preparation and database creation to Exploratory Data Analysis (EDA), advanced SQL querying, and dynamic dashboard visualization in Power BI.
+## 📌 Project Overview
 
-The core goal is to understand customer behavior, product distribution, risk profiles, and advisor performance to support strategic business decisions within the banking sector.
+**FinVision** is an end-to-end data analytics pipeline designed for the **banking domain**, aimed at extracting meaningful insights from customer data.
+This project demonstrates the complete journey:
 
----
+**Excel (Raw Data) → MySQL (Database) → Python (EDA) → SQL (Analysis) → Power BI (Dashboarding)**
 
-## Key Features & Deliverables
-
-* **End-to-End Pipeline:** Demonstrates proficiency across the entire data stack: ETL (Excel to MySQL) → EDA (Python/Pandas) → SQL Analysis → Visualization (Power BI).
-* **Database Management:** Created a relational database (`bank`) in **MySQL** with defined schema and loaded CSV data into structured tables.
-* **Data Analysis:** Performed statistical analysis and created aggregations to address core business questions.
-* **Interactive Dashboard:** Developed a multi-page **Power BI** dashboard (`FinVision`) with key performance indicators (KPIs) and interactive visualizations.
+The primary objective is to analyze customer behavior, understand product distribution, evaluate risk profiles, and measure advisor performance to support **strategic decision-making**.
 
 ---
 
-## Technology Stack
+## 🚀 Features & Deliverables
 
-| Category | Tool / Library | Usage |
-| :--- | :--- | :--- |
-| **Data Source** | Microsoft Excel | Raw data files |
-| **Data Storage** | MySQL, MySQL Workbench | Database creation (`bank`), schema definition, and data loading |
-| **Data Preparation/EDA** | Python (Jupyter Notebook), Pandas, NumPy | Data cleaning, descriptive statistics, distributions, and correlation analysis |
-| **Visualization (EDA)** | Matplotlib, Seaborn | Histograms, bar charts, and correlation heatmap |
-| **Visualization (Dashboard)** | **Power BI** | Connecting to MySQL, DAX measures, and interactive dashboard creation |
+✔️ **End-to-End Pipeline**: ETL + Database + EDA + SQL + Visualization
+✔️ **Relational Database**: Created structured schema in **MySQL** and loaded raw banking data
+✔️ **Exploratory Data Analysis (EDA)**: Statistical analysis, correlations, and data cleaning using **Python (Pandas, NumPy, Matplotlib, Seaborn)**
+✔️ **SQL Queries**: Business-driven queries on deposits, lending, demographics, and advisors
+✔️ **Interactive Dashboard**: Multi-page **Power BI** dashboard with KPIs, slicers, and drill-down insights
 
 ---
 
-## Project Phases & Workflow
+## 🛠 Technology Stack
 
-The project was executed in five distinct phases:
-
-### 1. Data Preparation (MySQL)
-
-* [cite_start]**Data Conversion:** Four raw Excel files were converted to **CSV format**[cite: 4].
-* [cite_start]**Standardization:** Ensured all column names were standardized (no spaces or special characters)[cite: 5].
-* [cite_start]**Database Setup:** Created a database named `bank` in MySQL [cite: 7] [cite_start]and defined table schema, including primary and foreign keys[cite: 8].
-* [cite_start]**Data Loading:** CSV files were loaded into MySQL tables using the Import Wizard or `LOAD DATA INFILE`[cite: 10].
-
-### 2. Exploratory Data Analysis (EDA) - Python
-
-* [cite_start]**Environment Setup:** Python was connected to the MySQL database using the `pymysql` connector[cite: 14].
-* [cite_start]**Data Loading:** Data from the `bank.banking` table and related dimension tables (e.g., `gender`, `bankingrelationship`) was loaded into **Pandas DataFrames**[cite: 15, 60].
-* **Analysis Performed:**
-    * [cite_start]**Descriptive Statistics:** Calculated mean, median, and checked for null values and outliers[cite: 17, 49, 51].
-    * [cite_start]**Distributions:** Visualized distributions for key features like `Age`, `Estimated Income` (grouped into Low/Mid/High bands), `Loyalty Classification`, and `Risk Weighting`[cite: 18, 52].
-    * [cite_start]**Correlations:** Analyzed correlations between numerical features like `Bank Deposits`, `Business Lending`, `Estimated Income`, and `Superannuation Savings`[cite: 19, 227].
-
-### 3. SQL Analysis & Data Transformation
-
-This phase focused on data cleaning and answering specific business questions using advanced SQL queries and transformations.
-
-* [cite_start]**Data Cleaning:** Handled missing values and standardized data types/formats[cite: 26, 27].
-* [cite_start]**Dimensional Joins:** Joined dimension tables (e.g., `Gender`, `BankingRelationship`, `InvestmentAdvisor`) with the main `banking` fact table[cite: 29].
-* **Key SQL Queries:**
-    * [cite_start]**Overview/KPIs:** Calculated total clients, total deposits, total lending, and average risk weighting[cite: 75, 76, 79, 81, 83].
-    * [cite_start]**Demographics:** Analyzed client distribution by age group, gender, nationality, and top occupations[cite: 84, 85, 91, 101, 106].
-    * [cite_start]**Product/Relationship Insights:** Determined total/average deposits and lending broken down by `Banking Relationship` and `Loyalty Classification`[cite: 113, 119, 125].
-    * [cite_start]**Advisor Performance:** Calculated clients handled and deposits/lending managed per investment advisor[cite: 135, 137, 141].
-* [cite_start]**Aggregations:** Created aggregated tables/SQL Views for use as data sources in Power BI[cite: 35].
-
-### 4. Dashboarding (Power BI)
-
-[cite_start]A branded dashboard named **FinVision** [cite: 49] [cite_start]was created, connecting live to the MySQL database[cite: 38].
-
-| Page | Key Components | Purpose |
-| :--- | :--- | :--- |
-| **1. Overview** | [cite_start]KPI Cards (Total Clients: 3000, Total Deposits: $\text{2.015M}$, Total Lending: $\text{2.60BN}$ [cite: 41][cite_start]), Donut Chart (Loyalty Classification), Bar Chart (Risk Weighting Distribution), Line Chart (Client Growth Trend)[cite: 161, 167]. | Provides a high-level executive summary of the bank's total scale and key distributions. |
-| **2. Customer Demographics** | [cite_start]KPI Cards, Slicer (Gender), Bar Chart (Age Distribution), Treemap (Nationality Distribution), Matrix/Table (Nationality vs. Loyalty Class, Occupation vs. Properties Owned)[cite: 176, 177, 187, 190, 193]. | Deep dive into customer profile segmentation for targeted marketing/service. |
-| **3. Banking Products & Relationships** | [cite_start]KPI Cards (Checking/Savings/Foreign Accounts), Bar Chart (Deposits by Relationship), Pie Chart (Lending by Relationship), Stacked Bar (Risk vs. Deposits)[cite: 201, 202, 207]. | Visualizes product uptake, deposit, and lending values across different banking tiers. |
-| **4. Investment & Advisor Insights** | [cite_start]KPI Cards (Total Advisors, Avg. Clients per Advisor), Bar Chart (Clients per Advisor), Line Chart (Bank Loan/Lending per Occupation), Correlation Heatmap (Hidden with insights text box)[cite: 214, 218, 222, 227]. | Tracks advisor performance and identifies correlations between client financial attributes (e.g., income, savings, loans). |
+| Category           | Tools Used                                      |
+| ------------------ | ----------------------------------------------- |
+| **Data Source**    | Excel (converted to CSV)                        |
+| **Database**       | MySQL, MySQL Workbench                          |
+| **EDA & Analysis** | Python, Pandas, NumPy, Matplotlib, Seaborn      |
+| **Visualization**  | Power BI (with MySQL connection + DAX measures) |
 
 ---
 
-## Key Insights from EDA & Analysis
+## 🔄 Project Workflow
 
-### Quantitative Insights
+### 1️⃣ Data Preparation (MySQL)
 
-* [cite_start]**Total Clients:** The bank currently serves **3,000** clients[cite: 77, 162].
-* [cite_start]**Total Deposits:** The total value of bank deposits is $\mathbf{2.015}$ million[cite: 79, 163].
-* [cite_start]**Total Lending:** The total business lending amount is $\mathbf{2.60}$ billion[cite: 81, 164].
-* [cite_start]**Age Distribution:** The majority of clients fall within the **25-50** age group[cite: 94].
-* [cite_start]**Loyalty Tier:** The **Jade** loyalty tier accounts for the highest number of total clients[cite: 168].
+* Converted **4 Excel sheets → CSV format**
+* Standardized column names (no spaces/special chars)
+* Created **`bank` database** with schema (primary & foreign keys)
+* Loaded CSV files into MySQL tables
 
-### Correlation Insights (from Heatmap)
+### 2️⃣ Exploratory Data Analysis (Python)
 
-* [cite_start]**Strong Positive Correlation** exists between `Bank Deposits` and `Checking Accounts` ($\text{0.84}$) and `Saving Accounts` ($\text{0.75}$), indicating a natural relationship where total deposits feed into these account types[cite: 227].
-* [cite_start]**Weak-to-Moderate Correlation** exists between `Estimated Income` and other financial features ($\text{0.26}$ – $\text{0.37}$), suggesting that income alone is not a strong predictor of client balances or debt[cite: 227].
-* [cite_start]**Superannuation Savings** show a low correlation ($\sim\text{0.2}$) with other variables, suggesting that retirement savings are mostly independent of other daily financial products[cite: 227].
+* Connected Python (Jupyter Notebook) to MySQL
+* Loaded data into **Pandas DataFrames**
+* Performed:
+
+  * Descriptive statistics (mean, median, nulls, distributions)
+  * Correlation analysis (income, deposits, lending, savings)
+  * Data cleaning & handling missing values
+
+### 3️⃣ SQL Analysis
+
+* Joined dimension tables with Clients table
+* Key queries answered:
+
+  * Total deposits/lending
+  * Client demographics (age, nationality, occupation)
+  * Banking relationships & loyalty tiers
+  * Advisor performance metrics
+
+### 4️⃣ Dashboarding (Power BI)
+
+* Connected Power BI to MySQL
+* Designed multi-page dashboard with:
+
+  * **Overview Page** (clients, deposits, lending, risk profiles)
+  * **Customer Demographics** (age, nationality, occupation)
+  * **Products & Relationships** (lending vs deposits, loyalty tiers)
+  * **Advisor Insights** (correlations, KPIs)
+* Added **slicers, filters, drill-downs** for interactivity
+
+---
+
+## 📊 Key Insights
+
+### Executive Summary
+
+* **Total Clients:** 3,000
+* **Total Deposits:** $2.015B
+* **Total Business Lending:** $2.60B
+* **Loyalty Tier:** *Jade* has the largest client share
+* **Risk Profile:** Most clients fall into **Risk Weighting 2**
+
+### Customer Insights
+
+* Age group **25–50 years** dominates the customer base
+* Majority clients are **European (1,309)**
+* Common occupations include Structural Analysis Engineer & Associate Professor
+
+### Product & Risk Insights
+
+* **Private Bank relationship** accounts for the largest lending ($1.16B, ~42.75%)
+* Deposits are highly concentrated in **Risk Weighting 2 clients**
+
+### Advisor Insights
+
+* Strong positive correlations:
+
+  * Bank Deposits ↔ Checking Accounts (0.84)
+  * Bank Deposits ↔ Saving Accounts (0.75)
+* **Income is not a strong predictor** of savings or borrowings
+* **Superannuation savings** are largely independent of day-to-day banking products
+
+---
+
+
+## 📽 Dashboard Walkthrough  
+
+![Dashboard Demo](assets/FinVisiom_Dashboard.gif)  
+
+
+---
+
+## 🧩 How to Reproduce
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/finvision.git
+   cd finvision
+   ```
+
+2. **Setup Database (MySQL)**
+
+   * Create a database: `CREATE DATABASE bank;`
+   * Import provided CSV files into tables
+
+3. **Run EDA Notebook**
+
+   * Open `FinVision_EDA.ipynb` in Jupyter Notebook
+   * Install dependencies:
+
+     ```bash
+     pip install pandas numpy matplotlib seaborn mysql-connector-python
+     ```
+   * Run all cells to perform data cleaning & EDA
+
+4. **Power BI Dashboard**
+
+   * Open the `.pbix` file 
+   * Connect Power BI to the `bank` database
+   * Refresh visuals to generate insights
+
+---
+
+## 📌 Deliverables
+
+* 📒 **Jupyter Notebook** → Exploratory Data Analysis
+* 🗄 **MySQL Database** → Structured banking data
+* 📊 **Power BI Dashboard** → Executive insights
+
+
+---
+
+## 👤 Author
+
+**Saylee Shirke**
+(Data Science Enthusiast | Python | SQL | Power BI | Data Analytics)
+
+---
+
+✨ This project demonstrates an **end-to-end data analytics workflow** in the **banking sector**—bridging raw data, statistical analysis, business logic, and visualization for decision-making.
+
+---
+
+Would you like me to also **extract screenshots** from your dashboard video and format them into the README (as image placeholders), so your GitHub page looks more visually engaging?
