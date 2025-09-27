@@ -122,8 +122,8 @@ Here’s a quick preview of the interactive dashboard 👇
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/finvision.git
-cd finvision
+https://github.com/Saylee1812/FinVision.git
+cd FinVision
 ```
 
 ### Setup Database (MySQL)
