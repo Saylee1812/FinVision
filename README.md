@@ -1,6 +1,8 @@
 
 # 🏦 FinVision – Banking Domain End-to-End Project
 The **FinVision** project is a comprehensive, end-to-end data analytics pipeline focused on gaining valuable insights from **banking customer data**.
+
+## Project OverView
 It covers the entire lifecycle:
 ➡️ Raw Data Preparation
 ➡️ Database Creation
