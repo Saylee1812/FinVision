@@ -114,7 +114,7 @@ It covers the entire lifecycle:
 
 Here’s a quick preview of the interactive dashboard 👇
 
-![Dashboard Demo](assets/FinVisiom_Dashboard.gif)
+![Dashboard Demo](assets/FinVision_Dashboard.gif)
 
 
 
