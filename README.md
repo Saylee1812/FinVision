@@ -164,8 +164,3 @@ The primary objective is to analyze customer behavior, understand product distri
 
 ---
 
-✨ This project demonstrates an **end-to-end data analytics workflow** in the **banking sector**—bridging raw data, statistical analysis, business logic, and visualization for decision-making.
-
----
-
-Would you like me to also **extract screenshots** from your dashboard video and format them into the README (as image placeholders), so your GitHub page looks more visually engaging?
