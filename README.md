@@ -135,7 +135,7 @@ cd FinVision
 * Install dependencies:
 
   ```bash
-  pip install pandas numpy matplotlib seaborn mysql-connector-python
+  pip install pandas numpy matplotlib seaborn pymysql
   ```
 * Run all cells to perform data cleaning & EDA
 
