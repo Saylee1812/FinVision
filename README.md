@@ -141,7 +141,7 @@ cd FinVision
 
 ### Power BI Dashboard
 
-* Open the `.pbix` file (if included)
+* Open the `.pbix` file 
 * Connect Power BI to the `bank` database
 * Refresh visuals to generate insights
 
